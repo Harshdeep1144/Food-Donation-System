@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Donation Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">LOGO</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#stats">Stats</a></li>
+                <li><a href="#donate">Donate</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="btn-auth" onclick="handleAuthButton()"></button>
+            </div>
+
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Help Fight Hunger</h1>
+            <p>Your donation can make a difference in someone's life.</p>
+            <a href="#donate" class="cta-button">
+                <button class="donate-btn">
+                    <div>GET STARTED</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none">
+                        <path d="M11.6801 14.62L14.2401 12.06L11.6801 9.5" stroke="black" stroke-width="2"
+                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M4 12.0601H14.17" stroke="black" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M12 4C16.42 4 20 7 20 12C20 17 16.42 20 12 20" stroke="black" stroke-width="2"
+                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button></a>
+        </section>
+
+        <section id="features" class="features">
+            <h2>Our Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>Easy Donation</h3>
+                    <p>Simple process to donate food or funds.</p>
+                </div>
+                <div class="feature">
+                    <h3>Local Impact</h3>
+                    <p>Your donations help your local community.</p>
+                </div>
+                <div class="feature">
+                    <h3>Transparency</h3>
+                    <p>Track where your donations go. <br> (In Progress)</p>
+                </div>
+                <div class="feature">
+                    <h3>Tax Deductible</h3>
+                    <p>Get tax benefits for your generosity. <br> (In Progress)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats" class="stats">
+            <h2>Our Impact</h2>
+            <div class="stat-grid">
+                <div class="stat">
+                    <span class="stat-number" data-target="10000">0</span>
+                    <span class="stat-label">Meals Donated</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="5000">0</span>
+                    <span class="stat-label">Volunteers</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="100">0</span>
+                    <span class="stat-label">Partner Organizations</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="donation-section-header">
+            <h2>Available Donations</h2>
+            <div id="donationsContainer" class="donations-container">
+                <!-- Data will dynamically populate here -->
+            </div>
+        </section>
+
+
+        <section id="donate" class="donation-form">
+            <h2>Make a Donation</h2>
+            <form id="donationForm">
+                <input type="text" name="name" id="name" placeholder="Your Name" required pattern="[A-Za-z\s]+">
+                <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" pattern="^[0-9]{10}$" required>
+                <input type="text" name="foodType" id="foodType" placeholder="Food Type" required pattern="[A-Za-z\s]+">
+                <input type="number" name="quantity" id="quantity" placeholder="Quantity (kg)" required min="1" step="0.1">
+                <input type="text" name="localAddress" id="localAddress" placeholder="Local Address (Street/Apartment/ Landmark)" required pattern="^[\w\s]+">
+                <input type="text" name="state" id="state" placeholder="State" required pattern="[A-Za-z\s]+">
+                <input type="text" name="city" id="city" placeholder="City" required pattern="[A-Za-z\s]+">
+                <input type="text" name="pinCode" id="pinCode" placeholder="Pin Code" pattern="^[0-9]{6}$" required>
+                <textarea name="message" id="message" placeholder="Message (Optional)" pattern="^[\w\s.,'-]*"></textarea>
+                <button type="submit">Submit Donation</button>
+            </form>
+        </section>
+        
+
+
+        <section class="waste-management-tips">
+            <h2>Food Waste Management Tips</h2>
+            <ul>
+                <li>Plan your meals and make a shopping list</li>
+                <li>Store food properly to extend its life</li>
+                <li>Use leftovers creatively in new recipes</li>
+                <li>Compost food scraps when possible</li>
+                <li>Donate excess non-perishable items to food banks</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required pattern="[A-Za-z\s]+">
+                <input type="email" name="email" placeholder="Your Email" required
+                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                <input type="text" name="subject" placeholder="Subject" required pattern="[A-Za-z0-9\s]+">
+                <textarea name="message" placeholder="Your Message" required pattern="^[\w\s.,'-]*"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We're dedicated to fighting hunger and reducing food waste in our communities.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#stats">Stats</a></li>
+                    <li><a href="#donate">Donate</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: info@foodshare.org</p>
+                <p>Phone: 8273607141</p>
+                <p>Address: Greater Noida,Knowledge Park 3, INDIA</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 FoodShare. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- Connect with firebase database -->
+    <script type="module" src="script.js"></script>
+
+    <!-- For mail service -->
+    <script type="module" src="emailservice.js"></script>
+
+    <!-- To handle user data  -->
+    <script type="module" src="userdb.js"></script>
+
+    <!-- To handle email service -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+</body>
+
+</html>
