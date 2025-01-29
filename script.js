@@ -269,7 +269,7 @@ document.getElementById('contactForm').addEventListener('submit', (e) => {
 
 // Twilio Account Details
 const accountSid = "AC102c3a645eeb5775de89ed2861569a88"; // Replace with your Twilio Account SID
-const authToken = "a47781836f421faf4546db34bbe9f805";   // Replace with your Twilio Auth Token
+const authToken = "3ca42bf6eed4993bc67e6e4740570086";   // Replace with your Twilio Auth Token
 const twilioPhoneNumber = "+16088928821"; // Replace with your Twilio phone number
 /**
  * Function to send SMS to the donor
