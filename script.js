@@ -268,10 +268,9 @@ document.getElementById('contactForm').addEventListener('submit', (e) => {
 
 
 // Twilio Account Details
-const accountSid = "AC293b2b156b2ed35bd7f82a075f03c153"; // Replace with your Twilio Account SID
-const authToken = "5f8010ca09ca9b6799c0c07ba9bf58dd";   // Replace with your Twilio Auth Token
-const twilioPhoneNumber = "+13612739317"; // Replace with your Twilio phone number
-
+const accountSid = "AC102c3a645eeb5775de89ed2861569a88"; // Replace with your Twilio Account SID
+const authToken = "a47781836f421faf4546db34bbe9f805";   // Replace with your Twilio Auth Token
+const twilioPhoneNumber = "+16088928821"; // Replace with your Twilio phone number
 /**
  * Function to send SMS to the donor
  * @param {string} phoneNumber - The donor's phone number
